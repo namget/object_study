@@ -27,7 +27,7 @@ public class Money {
         if(percent > 100){
             return this;
         }
-        new Money(this.money * (100 - percent) / 100);
+        return new Money(this.money * (100 - percent) / 100);
     }
 
 }

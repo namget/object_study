@@ -7,34 +7,44 @@ import java.time.LocalDateTime;
 
 public class Screening {
 
-    private Movie movie;
-    private int sequence;
-    private LocalDateTime whenScreened;
+    private final Movie movie;
+    private final int sequence;
+    private final LocalDateTime whenScreened;
 
-    public Screening(Movie movie, int sequence, LocalDateTime whenScreened){
+
+    public Screening(Movie movie, int sequence, LocalDateTime whenScreened) {
         this.movie = movie;
         this.sequence = sequence;
         this.whenScreened = whenScreened;
     }
 
-    private Money calculateFee(){
+    private Money calculateFee() {
         return movie.calculateMovieFee(this);
     }
 
-    public Money getMovieFee(){
+    public String getMovieName() {
+        return movie.getName();
+    }
+
+    public Money getMovieFee() {
         return movie.getFee();
     }
 
-    public boolean isSequence(int sequence){
+    public boolean isSequence(int sequence) {
         return this.sequence == sequence;
     }
 
-    public LocalDateTime getStartTime(){
+    public LocalDateTime getStartTime() {
         return whenScreened;
     }
 
-    public LocalDateTime getEndTime(){
+    public LocalDateTime getEndTime() {
         return whenScreened.plusMinutes(movie.getDuration().toMinutes());
     }
 
+    public boolean compareScreen(Screening screening) {
+        return this.whenScreened == screening.whenScreened &&
+                this.movie.getName().equals(screening.movie.getName());
+
+    }
 }

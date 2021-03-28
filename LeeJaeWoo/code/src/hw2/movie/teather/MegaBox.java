@@ -1,49 +1,37 @@
 package hw2.movie.teather;
 
+import hw2.movie.event.DiscountEvent;
 import hw2.seller.AutomaticMarchine;
-import hw2.seller.MoneyOffice;
+import hw2.seller.TicketOffice;
 import hw2.seller.Seller;
 import hw2.seller.TicketSeller;
 import hw2.ticket.TicketChecker;
-import hw2.user.User;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class MegaBox implements TeatherBrand {
-    private MoneyOffice moneyOffice = new MoneyOffice();
-    private TicketChecker ticketChecker = new TicketChecker();
-    List<Seller> ticketSellers = new ArrayList<>();
+public class MegaBox extends MovieBrand {
 
     public MegaBox() {
         initTicketSeller();
     }
 
+    @Override
+    BrandType getBrandType() {
+        return BrandType.MEGABOX;
+    }
 
     private void initTicketSeller() {
-        ticketSellers.add(new TicketSeller(moneyOffice));
-        ticketSellers.add(new TicketSeller(moneyOffice));
-        ticketSellers.add(new TicketSeller(moneyOffice));
-        ticketSellers.add(new AutomaticMarchine(moneyOffice));
-        ticketSellers.add(new AutomaticMarchine(moneyOffice));
+        ticketSellers.add(new TicketSeller(ticketOffice));
+        ticketSellers.add(new TicketSeller(ticketOffice));
+        ticketSellers.add(new TicketSeller(ticketOffice));
+        ticketSellers.add(new AutomaticMarchine(ticketOffice));
+        ticketSellers.add(new AutomaticMarchine(ticketOffice));
     }
 
-    void sellTicket(User user) {
-        for (Seller ticketSeller : ticketSellers) {
-            if (ticketSeller.isBusy()) {
-                continue;
-            }
-            ticketSeller.sellTo(user);
-        }
-    }
-
-    void showMovie() { }
-
-    public void enter(User user) {
-        if (ticketChecker.checkTicket(user.getTicket())) {
-            showMovie();
-        } else {
-            sellTicket(user);
-        }
+    @Override
+    List<DiscountEvent> getDisCountEvent() {
+        return Arrays.asList();
     }
 }

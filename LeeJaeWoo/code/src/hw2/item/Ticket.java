@@ -1,13 +1,37 @@
 package hw2.item;
 
+import hw2.movie.screen.Screening;
+import hw2.movie.teather.BrandType;
+
+import java.time.LocalDateTime;
+
 public class Ticket {
-    public Ticket(int price){
-        this.price = price;
+    private Screening screening;
+    private BrandType brandType;
+
+    public Ticket(Screening screening , BrandType brandType) {
+        this.screening = screening;
+        this.brandType = brandType;
     }
 
-    private Money price = new Money(10000);
+    public BrandType getBrandType() {
+        return brandType;
+    }
+
+    public Screening getScreening() {
+        return screening;
+    }
 
     public Money getPrice() {
-        return price;
+        return screening.getMovieFee();
     }
+
+    public String ticketName() {
+        return screening.getMovieName();
+    }
+
+    public LocalDateTime getStartDate(){
+        return screening.getStartTime();
+    }
+
 }

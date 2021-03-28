@@ -4,7 +4,9 @@ import hw2.item.Bag;
 import hw2.item.Money;
 import hw2.item.Ticket;
 
-public class User implements Customer {
+import java.util.List;
+
+public class User  {
 
     private int age;
     private Bag bag;
@@ -14,7 +16,6 @@ public class User implements Customer {
         this.age = age;
     }
 
-    @Override
     public Money buy(Ticket ticket) {
         if (bag.hasInvitation()) {
             bag.changeInvitationToTicket(ticket);
@@ -32,7 +33,6 @@ public class User implements Customer {
         return bag.getTicket();
     }
 
-    @Override
     public void goToHome() {
     }
 }

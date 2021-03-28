@@ -19,6 +19,10 @@ public class Movie {
         this.discountPolicy = discountPolicy;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public Money getFee(){
         return this.money;
     }
