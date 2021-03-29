@@ -5,7 +5,7 @@ import hw2.item.Ticket;
 import hw2.movie.event.DiscountEvent;
 import hw2.movie.screen.Screening;
 import hw2.movie.teather.BrandType;
-import hw2.user.User;
+import hw2.ticket.Reservation;
 
 import java.util.HashMap;
 import java.util.List;
@@ -15,25 +15,16 @@ public class TicketOffice {
     private Money money = new Money(100000);
     private final Map<String, List<Ticket>> ticketMap = new HashMap<>();
     private final BrandType brandType;
-    private List<DiscountEvent> discountEvents;
+    private DiscountEvent discountEvent;
 
 
-    public TicketOffice(BrandType brandType, List<DiscountEvent> discountEvents) {
+    public TicketOffice(BrandType brandType, DiscountEvent discountEvents) {
         this.brandType = brandType;
-        this.discountEvents = discountEvents;
+        this.discountEvent = discountEvents;
     }
 
-    public DiscountEvent isDiscountEventSatisfied(List<User> users) {
-        for (DiscountEvent discountEvent : discountEvents) {
-            if (discountEvent.isSatisfied(users.get(0))) {
-                return discountEvent;
-            }
-        }
-        return null;
-    }
-
-    public void changeDiscountEvent(List<DiscountEvent> discountEvents) {
-        this.discountEvents = discountEvents;
+    public int getSatisfiedTicketCount(Reservation reservation) {
+        return discountEvent.getSatisfiedCount(reservation);
     }
 
     private void initTicket() {
@@ -46,6 +37,10 @@ public class TicketOffice {
 
     public void plusMoney(Money price) {
         money.plusMoney(price);
+    }
+
+    public void changeDiscountEvent(DiscountEvent discountEvents) {
+        this.discountEvent = discountEvents;
     }
 
     public Ticket getTicket(Screening screening) {

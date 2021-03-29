@@ -6,6 +6,7 @@ import hw2.seller.AutomaticMarchine;
 import hw2.seller.TicketOffice;
 import hw2.seller.Seller;
 import hw2.seller.TicketSeller;
+import hw2.ticket.Reservation;
 import hw2.ticket.TicketChecker;
 import hw2.user.User;
 
@@ -17,13 +18,21 @@ public abstract class MovieBrand {
     protected TicketOffice ticketOffice = new TicketOffice(getBrandType(), getDisCountEvent());
     protected TicketChecker ticketChecker = new TicketChecker(getBrandType());
     protected List<Seller> ticketSellers = new ArrayList<>();
+    protected DiscountEvent discountEvent;
 
 
-    public MovieBrand() {
+    public MovieBrand(DiscountEvent discountEvent) {
+        this.discountEvent = discountEvent;
         initTicketSeller();
     }
 
-    abstract List<DiscountEvent> getDisCountEvent();
+    protected DiscountEvent getDisCountEvent() {
+        return discountEvent;
+    }
+
+    protected void changeDiscountEvent(DiscountEvent discountEvent) {
+        this.discountEvent = discountEvent;
+    }
 
     abstract BrandType getBrandType();
 
@@ -36,8 +45,9 @@ public abstract class MovieBrand {
     }
 
     protected void sellTicket(List<User> users, Screening screening) {
+
         for (Seller ticketSeller : ticketSellers) {
-            ticketSeller.sellTo(users, screening);
+            ticketSeller.sellTo(new Reservation(users, screening));
         }
     }
 
@@ -46,7 +56,7 @@ public abstract class MovieBrand {
 
     protected void enter(List<User> users, Screening screening) {
         boolean isAvailable = false;
-        for(User user : users){
+        for (User user : users) {
             isAvailable = isAvailable && ticketChecker.checkTicket(user.getTicket(), screening);
         }
         if (isAvailable) {

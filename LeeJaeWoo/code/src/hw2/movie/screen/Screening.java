@@ -30,6 +30,14 @@ public class Screening {
         return movie.getFee();
     }
 
+    public void setMovieFee(Money money){
+        movie.setFee(money);
+    }
+
+    public int getSequence() {
+        return sequence;
+    }
+
     public boolean isSequence(int sequence) {
         return this.sequence == sequence;
     }
@@ -45,6 +53,5 @@ public class Screening {
     public boolean compareScreen(Screening screening) {
         return this.whenScreened == screening.whenScreened &&
                 this.movie.getName().equals(screening.movie.getName());
-
     }
 }

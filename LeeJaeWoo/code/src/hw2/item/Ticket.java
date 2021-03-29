@@ -22,6 +22,10 @@ public class Ticket {
         return screening;
     }
 
+    public void setPrice(Money money){
+        screening.setMovieFee(money);
+    }
+
     public Money getPrice() {
         return screening.getMovieFee();
     }

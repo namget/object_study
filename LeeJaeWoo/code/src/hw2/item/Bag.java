@@ -23,6 +23,10 @@ public class Bag {
         return invitation != null;
     }
 
+    public boolean hasTicket() {
+        return ticket != null;
+    }
+
     public void changeInvitationToTicket(Ticket ticket) {
         invitation = null;
         this.ticket = ticket;

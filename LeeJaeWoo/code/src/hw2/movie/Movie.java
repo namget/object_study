@@ -23,6 +23,10 @@ public class Movie {
         return name;
     }
 
+    public void setFee(Money money) {
+        this.money = money;
+    }
+
     public Money getFee(){
         return this.money;
     }

@@ -13,8 +13,8 @@ import java.util.List;
 
 public class MegaBox extends MovieBrand {
 
-    public MegaBox() {
-        initTicketSeller();
+    public MegaBox(DiscountEvent discountEvent) {
+        super(discountEvent);
     }
 
     @Override
@@ -22,16 +22,4 @@ public class MegaBox extends MovieBrand {
         return BrandType.MEGABOX;
     }
 
-    private void initTicketSeller() {
-        ticketSellers.add(new TicketSeller(ticketOffice));
-        ticketSellers.add(new TicketSeller(ticketOffice));
-        ticketSellers.add(new TicketSeller(ticketOffice));
-        ticketSellers.add(new AutomaticMarchine(ticketOffice));
-        ticketSellers.add(new AutomaticMarchine(ticketOffice));
-    }
-
-    @Override
-    List<DiscountEvent> getDisCountEvent() {
-        return Arrays.asList();
-    }
 }

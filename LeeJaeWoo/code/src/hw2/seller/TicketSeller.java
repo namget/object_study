@@ -1,10 +1,9 @@
 package hw2.seller;
 
-import hw2.movie.event.DiscountEvent;
-import hw2.movie.screen.Screening;
+import hw2.item.Money;
+import hw2.item.Ticket;
+import hw2.ticket.Reservation;
 import hw2.user.User;
-
-import java.util.List;
 
 public class TicketSeller implements Seller {
     private TicketOffice ticketOffice;
@@ -14,10 +13,17 @@ public class TicketSeller implements Seller {
     }
 
     @Override
-    public void sellTo(List<User> users , Screening screening) {
-        DiscountEvent discountEvent = ticketOffice.isDiscountEventSatisfied(users);
-        for(User user : users){
-            ticketOffice.plusMoney(user.buy(ticketOffice.getTicket(screening)));
+    public void sellTo(Reservation reservation) {
+        for (int index = 0; index < ticketOffice.getSatisfiedTicketCount(reservation); index++) {
+            Ticket ticket = ticketOffice.getTicket(reservation.getScreening());
+            ticket.setPrice(Money.ZERO);
+            if (index < reservation.getUsers().size() - 1) {
+                ticketOffice.plusMoney(reservation.getUsers().get(index).buy(ticket));
+            }
+        }
+
+        for (User user : reservation.getUsers()) {
+            user.buy(ticketOffice.getTicket(reservation.getScreening()));
         }
     }
 

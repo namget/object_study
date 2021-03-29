@@ -1,5 +1,8 @@
 package hw2.movie.event;
 
-public interface DiscountEvent<T> {
-    public boolean isSatisfied(T t);
+import hw2.ticket.Reservation;
+
+public interface DiscountEvent {
+    public boolean isSatisfied(Reservation reservation);
+    public int getSatisfiedCount(Reservation reservation);
 }
