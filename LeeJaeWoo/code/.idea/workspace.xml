@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="33384c82-af09-4e12-823e-6db65a4cfb52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/hw2/item/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/item/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/movie/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/movie/condition/discount/PeriodDiscountCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/condition/discount/PeriodDiscountCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/movie/event/AgeEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/event/AgeEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/movie/event/DiscountEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/event/DiscountEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/movie/event/OnePlusOneEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/event/OnePlusOneEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/movie/event/SequentialEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/event/SequentialEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/movie/event/TwoPlusOneDiscountEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/event/TwoPlusOneDiscountEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/movie/screen/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/screen/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/movie/screen/Screening.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/screen/Screening.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/movie/teather/CGV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/teather/CGV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/movie/teather/LotteCinema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/teather/LotteCinema.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/movie/teather/MegaBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/teather/MegaBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/movie/teather/MovieBrand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/teather/MovieBrand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/seller/AutomaticMarchine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/seller/AutomaticMarchine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/seller/Seller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/seller/Seller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/seller/TicketOffice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/seller/TicketOffice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/seller/TicketSeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/seller/TicketSeller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/ticket/Reservation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hw2/ticket/TicketChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/ticket/TicketChecker.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1qKUHclUwfFLtgE2LXGkJxCYTGw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\object_code\src\hw1" />
+      <recent name="C:\Users\User\Desktop\object_code\src\hw2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\object_code\src\hw2\movie\teather" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="hw2.movie" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33384c82-af09-4e12-823e-6db65a4cfb52" name="Default Changelist" comment="" />
+      <created>1616827690173</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616827690173</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
