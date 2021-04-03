@@ -12,7 +12,7 @@ public class AmountDiscountPolicy implements DiscountPolicy{
 
     private final Money amount;
 
-    private List<DiscountCondition> discountConditions = new ArrayList<>();
+    private final List<DiscountCondition> discountConditions;
 
     public AmountDiscountPolicy(Money amount,DiscountCondition... discountConditions) {
         this.amount = amount;

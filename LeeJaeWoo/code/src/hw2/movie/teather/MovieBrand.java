@@ -1,13 +1,12 @@
 package hw2.movie.teather;
 
-import hw2.movie.Movie;
 import hw2.movie.event.DiscountEvent;
+import hw2.movie.screen.Reservation;
 import hw2.movie.screen.Screening;
 import hw2.seller.AutomaticMarchine;
-import hw2.seller.TicketOffice;
 import hw2.seller.Seller;
+import hw2.seller.TicketOffice;
 import hw2.seller.TicketSeller;
-import hw2.movie.screen.Reservation;
 import hw2.ticket.TicketChecker;
 import hw2.user.User;
 
@@ -47,7 +46,7 @@ public abstract class MovieBrand {
         ticketSellers.add(new AutomaticMarchine(ticketOffice));
     }
 
-    protected void sellTicket(List<User> users, Reservation reservation) {
+    protected void sellTicket(Reservation reservation) {
 
         for (Seller ticketSeller : ticketSellers) {
             ticketSeller.sellTo(reservation);
@@ -57,15 +56,15 @@ public abstract class MovieBrand {
     protected void showMovie() {
     }
 
-    protected void enter(List<User> users, Reservation reservation) {
+    protected void enter(Reservation reservation) {
         boolean isAvailable = false;
-        for (User user : users) {
+        for (User user : reservation.getUsers()) {
             isAvailable = isAvailable && ticketChecker.checkTicket(user.getTicket(), reservation);
         }
         if (isAvailable) {
             showMovie();
         } else {
-            sellTicket(users, reservation);
+            sellTicket(reservation);
         }
     }
 }

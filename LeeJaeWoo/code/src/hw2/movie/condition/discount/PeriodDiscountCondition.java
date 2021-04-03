@@ -7,9 +7,9 @@ import java.time.LocalDate;
 
 public class PeriodDiscountCondition implements DiscountCondition {
 
-    private LocalDate startTime;
-    private LocalDate endTime;
-    private DayOfWeek dayOfWeek;
+    private final LocalDate startTime;
+    private final LocalDate endTime;
+    private final DayOfWeek dayOfWeek;
 
     public PeriodDiscountCondition(LocalDate startTime, LocalDate endTime, DayOfWeek dayOfWeek){
         this.startTime = startTime;

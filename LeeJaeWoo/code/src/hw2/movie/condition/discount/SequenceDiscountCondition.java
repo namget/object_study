@@ -4,7 +4,7 @@ import hw2.movie.screen.Screening;
 
 public class SequenceDiscountCondition implements DiscountCondition {
 
-    private int seqence;
+    private final int seqence;
 
     public SequenceDiscountCondition(int seqence) {
         this.seqence = seqence;
