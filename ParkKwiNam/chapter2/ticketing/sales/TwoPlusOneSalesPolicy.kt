@@ -7,7 +7,7 @@ import chapter2.people.User
 
 class TwoPlusOneSalesPolicy : SalesPolicy {
     override fun apply(price: Money, user: User): List<Ticket> {
-        return (1..user.ticketCount).map { Ticket(price) } +
-                (1..user.ticketCount / 2).map { Ticket(FREE) }
+        return (1..user.ticketingInfo.ticketCount).map { Ticket(price) } +
+                (1..user.ticketingInfo.ticketCount / 2).map { Ticket(FREE) }
     }
 }

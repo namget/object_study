@@ -6,6 +6,6 @@ import chapter2.people.User
 
 class DefaultSalesPolicy : SalesPolicy {
     override fun apply(price: Money, user: User): List<Ticket> {
-        return (1..user.ticketCount).map { Ticket(price) }
+        return (1..user.ticketingInfo.ticketCount).map { Ticket(price) }
     }
 }
