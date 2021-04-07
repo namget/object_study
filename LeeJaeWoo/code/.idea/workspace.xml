@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33384c82-af09-4e12-823e-6db65a4cfb52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/hw2/item/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/item/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/movie/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/movie/condition/discount/PeriodDiscountCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/condition/discount/PeriodDiscountCondition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/movie/event/AgeEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/event/AgeEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/movie/event/DiscountEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/event/DiscountEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/movie/event/OnePlusOneEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/event/OnePlusOneEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/movie/event/SequentialEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/event/SequentialEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/movie/event/TwoPlusOneDiscountEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/event/TwoPlusOneDiscountEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/movie/screen/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/screen/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/movie/screen/Screening.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/screen/Screening.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/movie/teather/CGV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/teather/CGV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/movie/teather/LotteCinema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/teather/LotteCinema.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/movie/teather/MegaBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/teather/MegaBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/movie/teather/MovieBrand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/movie/teather/MovieBrand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/seller/AutomaticMarchine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/seller/AutomaticMarchine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/seller/Seller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/seller/Seller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/seller/TicketOffice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/seller/TicketOffice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/seller/TicketSeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/seller/TicketSeller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/ticket/Reservation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hw2/ticket/TicketChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hw2/ticket/TicketChecker.java" afterDir="false" />
-    </list>
+    <list default="true" id="33384c82-af09-4e12-823e-6db65a4cfb52" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
