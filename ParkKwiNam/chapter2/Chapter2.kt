@@ -3,16 +3,15 @@ package chapter2
 import chapter2.inspector.TicketInspector
 import chapter2.items.Bag
 import chapter2.items.Money
+import chapter2.movie.Movie
 import chapter2.people.User
 import chapter2.place.Theater
 import chapter2.sellable.TicketKiosk
 import chapter2.sellable.TicketSellable
 import chapter2.sellable.TicketSeller
 import chapter2.ticketing.Ticketing
-import chapter2.ticketing.discount.condition.AgeDiscountCondition
-import chapter2.ticketing.discount.condition.EnterCountCondition
-import chapter2.ticketing.discount.condition.SeniorCondition
-import chapter2.ticketing.discount.condition.YouthCondition
+import chapter2.ticketing.TicketingInfo
+import chapter2.ticketing.discount.condition.*
 import chapter2.ticketing.discount.policy.AmountDiscountPolicy
 import chapter2.ticketing.discount.policy.PercentDiscountPolicy
 import chapter2.ticketing.sales.OnePlusOneSalesPolicy
@@ -25,18 +24,20 @@ fun main(args: Array<String>) {
 }
 
 fun getUserList() = listOf(
-    User("관람객1", 10, Bag(mutableListOf(Money(9000)))),
+    User("관람객1", 10, Bag(mutableListOf(Money(9000))), TicketingInfo(Movie(name = "영화1", sequence = 1))),
     User("관람객2", 65, Bag(mutableListOf(Money(10000)))),
     User("관람객3", 75, Bag(mutableListOf(Money(8000)))),
-    User("관람객4", 24, Bag(mutableListOf(Money(50000))), ticketCount = 4),
+    User("관람객4", 24, Bag(mutableListOf(Money(50000))), TicketingInfo(Movie(name = "영화2"), ticketCount = 4)),
 )
 
 val seniorDiscountPolicy = AmountDiscountPolicy(Money(2000), listOf(SeniorCondition()))
 val youthAndSeniorDiscountPolicy = PercentDiscountPolicy(10, listOf(YouthCondition(), SeniorCondition()))
+val morningDiscountPolicy = AmountDiscountPolicy(Money(3000), listOf(MovieSequenceDiscountCondition(sequence = 1)))
 
 fun simulateCGV() {
     val cgv = Theater("CGV")
-    val cgvTicketing = Ticketing(discountPolicy = listOf(seniorDiscountPolicy, youthAndSeniorDiscountPolicy))
+    val cgvTicketing =
+        Ticketing(discountPolicy = listOf(seniorDiscountPolicy, youthAndSeniorDiscountPolicy, morningDiscountPolicy))
     val cgvTicketSeller = listOf<TicketSellable>(
         TicketSeller("cgv 티켓판매원1", 27, cgvTicketing),
         TicketSeller("cgv 티켓판매원2", 30, cgvTicketing)

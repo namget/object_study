@@ -3,8 +3,14 @@ package chapter2.people
 import chapter2.items.Bag
 import chapter2.items.Money
 import chapter2.items.Ticket
+import chapter2.ticketing.TicketingInfo
 
-class User(name: String, age: Int, private val bag: Bag, val ticketCount: Int = 1) : Person(name, age) {
+class User(
+    name: String,
+    age: Int,
+    private val bag: Bag,
+    val ticketingInfo: TicketingInfo = TicketingInfo()
+) : Person(name, age) {
 
     var enterOrder: Int = 0
 
@@ -29,6 +35,6 @@ class User(name: String, age: Int, private val bag: Bag, val ticketCount: Int = 
     }
 
     override fun toString(): String {
-        return super.toString() + "[$enterOrder 번째 고객]" + ", 희망구매($ticketCount)" + ", 소지품$bag"
+        return super.toString() + "[$enterOrder 번째 고객]" + ", 희망예매정보($ticketingInfo)" + ", 소지품$bag"
     }
 }

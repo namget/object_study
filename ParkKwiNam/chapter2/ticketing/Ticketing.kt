@@ -7,7 +7,6 @@ import chapter2.ticketing.sales.DefaultSalesPolicy
 import chapter2.ticketing.sales.SalesPolicy
 
 class Ticketing(
-    private val defaultTicketFee: Money = Money(10000),
     var discountPolicy: List<DiscountPolicy>,
     var salesPolicy: SalesPolicy = DefaultSalesPolicy()
 ) {
@@ -19,6 +18,7 @@ class Ticketing(
     }
 
     private fun applyDiscount(user: User): Money {
+        val defaultTicketFee = user.ticketingInfo.movie.price
         return discountPolicy.map { discountPolicy -> discountPolicy.calculateDiscount(defaultTicketFee, user) }
             .minByOrNull { money: Money -> money.value } ?: defaultTicketFee
     }
