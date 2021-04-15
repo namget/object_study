@@ -1,0 +1,26 @@
+[S]ingle responsibility principle - 단일 책임 원칙
+클래스는 단 하나의 책임을 가져야 한다.
+
+[O]pen close principle - 개방 폐쇄 원칙
+확장에는 열려 있고, 변경에는 닫혀 있어야 한다.
+
+[L]iskov substitution principle - 리스코프 치환 원칙
+자식 클래스는(SubClass) 부모클래스로(SuperClass) 교체할 수 있어야 한다.
+
+[I]nterface segregation principle - 인터페이스 분리 원칙
+클라이언트는 자신이 사용하는 인터페이스만 구현 해야 한다.
+
+[D]ependency inversion principle - 의존 역전 원칙
+상위 레벨 모듈은 하위 레벨 모듈에 의존해서는 안되며, 추상 타입에 의존해야 한다.
+상위 레벨 모듈 = 의미있는 기능을 제공하는 모듈
+하위 레벨 모듈 = 상위 레벨 모듈의 기능을 사용하여 실제 구현 
+
+[추가 참고 자료]
+의존 역전 원칙(Dependency Inversion Principle)
+https://koseungbin.gitbook.io/wiki/books/undefined/part-2.-di/solid/dependency-inversion-principle
+
+DIP & IoC
+https://develogs.tistory.com/19
+
+DIP 예제
+https://shinsunyoung.tistory.com/82
