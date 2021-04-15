@@ -66,3 +66,12 @@
 SOLID 에 대한 각각 의미하는걸 확인해보고 정리해오기! 
 
 다음시간에 토론
+
+## 과제 5
+
+다음에 대해 각 확인해보고 정리해오기~
+
+- **DI**(Dependency Injection, 의존성 주입)
+- **IoC**(Inversion of Control, 제어의 역전)
+
+다음시간에 토론!
