@@ -1,0 +1,13 @@
+- DI, IoC, DIP, IoC container
+https://medium.com/sjk5766/dependency-injection-ioc-dip-ioc-container%EC%A0%95%EB%A6%AC-310885cca412
+
+DIP와 IoC는 객체간 결합도를 줄이기 위한 개념(principle) 이다.
+
+- IoC(Inversion of Control, 제어의 역전)
+객체간 결합도를 줄이기위한 원칙이다.
+결합도를 줄이기 위해 제어를 역전 시킨다
+제어란 의존성을 가진 객체의 생성, 로직 흐름을 포함.
+
+- DI(Dependency Injection, 의존성 주입)
+IoC를 구현하기 위한 하나의 방법(디자인패턴)
+의존성 있는 객체의 생성을 외부에서 처리하여 제공.
